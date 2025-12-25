@@ -1,0 +1,13 @@
+import pandas as pd
+
+df = pd.read_csv("orders.csv")  
+
+print(df.head(10))
+
+print("\nКількість замовлень кожного клієнта:")
+print(df["Клієнт"].value_counts())
+
+print("\nМаксимальна сума:", df["Сума"].max())
+print("Мінімальна сума:", df["Сума"].min())
+
+print("\nЗагальна сума:", df["Сума"].sum())
