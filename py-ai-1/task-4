@@ -1,0 +1,20 @@
+import random
+
+n = int(input("Довжина масивів: "))
+
+arr1 = [random.randint(0, 10) for _ in range(n)]
+arr2 = [random.randint(10, 20) for _ in range(n)]
+
+print("Перший масив:", arr1)
+print("Другий масив:", arr2)
+
+
+merged = arr1 + arr2
+print("Об'єднаний масив:", merged)
+
+
+sum_arr = [arr1[i] + arr2[i] for i in range(n)]
+diff_arr = [arr1[i] - arr2[i] for i in range(n)]
+
+print("Сума:", sum_arr)
+print("Різниця:", diff_arr)
