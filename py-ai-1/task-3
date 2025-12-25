@@ -1,0 +1,28 @@
+start = int(input("Початок діапазону: "))
+end = int(input("Кінець діапазону: "))
+
+numbers = list(range(start, end + 1))
+
+if len(numbers) < 30:
+    print("Помилка: потрібно мінімум 30 чисел")
+    exit()
+
+matrix = []
+index = 0
+for i in range(6):
+    matrix.append(numbers[index:index + 5])
+    index += 5
+
+print("Матриця:")
+for row in matrix:
+    print(row)
+
+
+row_sums = [sum(row) for row in matrix]
+print("Суми рядків:", row_sums)
+
+
+rows = len(matrix)
+cols = len(matrix[0])
+col_max = [max(matrix[row][col] for row in range(rows)) for col in range(cols)]
+print("Максимуми стовпців:", col_max)
