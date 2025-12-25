@@ -1,0 +1,23 @@
+import pandas as pd
+
+clients = pd.DataFrame({
+    "ID": [1, 2, 3, 4, 5],
+    "Ім'я": ["Іван", "Анна", "Марія", "Олег", "Ігор"],
+    "Місто": ["Київ", "Львів", "Одеса", "Київ", "Харків"]
+})
+
+orders = pd.DataFrame({
+    "ID клієнта": [1, 2, 1, 3, 5, 2],
+    "Замовлення": ["A", "B", "C", "D", "E", "F"],
+    "Вартість": [500, 800, 300, 1200, 700, 400]
+})
+
+print(clients)
+print(orders)
+
+merged = clients.merge(orders, left_on="ID", right_on="ID клієнта")
+
+result = merged.groupby(["ID", "Ім'я"])["Вартість"].sum().reset_index()
+
+print("\nЗагальна вартість замовлень:")
+print(result)
