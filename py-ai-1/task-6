@@ -1,0 +1,43 @@
+rows = int(input("Кількість рядків: "))
+cols = int(input("Кількість стовпців: "))
+
+
+matrix = []
+value = 1
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(value)
+        value += 1
+    matrix.append(row)
+
+print("Початкова матриця:")
+for row in matrix:
+    print(row)
+
+
+new_rows = int(input("Нові рядки: "))
+new_cols = int(input("Нові стовпці: "))
+
+flat = [x for row in matrix for x in row]
+
+new_matrix = []
+index = 0
+for i in range(new_rows):
+    new_matrix.append(flat[index:index + new_cols])
+    index += new_cols
+
+print("Нова матриця:")
+for row in new_matrix:
+    print(row)
+
+
+row_min = [min(row) for row in new_matrix]
+row_max = [max(row) for row in new_matrix]
+
+print("Мінімальні значення:", row_min)
+print("Максимальні значення:", row_max)
+
+
+total_sum = sum(flat)
+print("Загальна сума:", total_sum)
