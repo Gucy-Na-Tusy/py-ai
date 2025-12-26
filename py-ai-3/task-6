@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+
+time = [1, 2, 3, 4, 5, 6, 7]
+
+conversion = [2, 2.5, 3, 3.2, 3.5, 3.8, 4]
+retention = [60, 62, 65, 64, 66, 68, 70]
+avg_check = [300, 320, 310, 330, 350, 360, 380]
+orders = [50, 55, 60, 58, 62, 65, 70]
+
+fig, axs = plt.subplots(2, 2)
+
+axs[0, 0].plot(time, conversion)
+axs[0, 0].set_title("Конверсія")
+axs[0, 1].plot(time, retention)
+axs[0, 1].set_title("Утримання")
+axs[1, 0].plot(time, avg_check)
+axs[1, 0].set_title("Середній чек")
+axs[1, 1].plot(time, orders)
+axs[1, 1].set_title("Кількість замовлень")
+
+fig.suptitle("Метрики продукту")
+plt.tight_layout()
+plt.show()
