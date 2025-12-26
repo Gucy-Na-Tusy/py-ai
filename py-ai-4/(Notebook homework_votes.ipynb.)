@@ -1,0 +1,25 @@
+from collections import Counter
+
+votes = ["apple", "banana", "apple", "orange", "banana", "apple", "apple", "apple", "orange"]
+
+counts = Counter(votes)
+leader = counts.most_common(1)[0]
+top_3 = counts.most_common(3)
+
+counts, leader, top_3
+
+/////////////////////////////////////////////Markdown///////////////////////////////////
+
+| Фрукт   | Кількість |
+|---------|-----------|
+| apple   | 5         |
+| banana  | 2         |
+| orange  | 2         |
+
+/////////////////////////////////////////////Markdown(ТОП-3)///////////////////////////////////
+
+| Місце | Фрукт    | Кількість |
+|-------|----------|-----------|
+| 1     | apple    | 5         |
+| 2     | banana   | 2         |
+| 3     | orange   | 2         |
