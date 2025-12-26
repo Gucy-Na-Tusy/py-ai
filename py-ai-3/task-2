@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+import random
+
+ages = [random.randint(18, 65) for _ in range(100)]
+avg_age = sum(ages) / len(ages)
+
+plt.hist(ages, bins=10)
+plt.axvline(avg_age)
+plt.xlabel("Вік")
+plt.ylabel("Кількість осіб")
+plt.title("Розподіл вікових груп")
+plt.show()
