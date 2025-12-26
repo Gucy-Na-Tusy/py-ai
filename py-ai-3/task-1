@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+
+months = ["Січ", "Лют", "Бер", "Квіт", "Трав", "Чер"]
+plan = [100, 120, 130, 150, 160, 180]
+fact = [90, 110, 125, 140, 170, 175]
+
+plt.plot(months, plan, label="План")
+plt.plot(months, fact, label="Факт")
+plt.xlabel("Місяць")
+plt.ylabel("Продажі")
+plt.title("Планові та фактичні продажі")
+plt.legend()
+plt.show()
