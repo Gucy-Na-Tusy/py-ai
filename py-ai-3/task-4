@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+
+days = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"]
+temperature = [20, 22, 21, 23, 25, 26, 24]
+humidity = [60, 58, 62, 55, 50, 48, 52]
+
+plt.plot(days, temperature, label="Температура")
+plt.plot(days, humidity, label="Вологість")
+plt.xlabel("День")
+plt.ylabel("Значення")
+plt.title("Температура та вологість за тиждень")
+plt.legend()
+plt.xticks(rotation=30)
+plt.show()
