@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import random
+
+group1 = [random.randint(60, 90) for _ in range(20)]
+group2 = [random.randint(50, 85) for _ in range(20)]
+group3 = [random.randint(65, 95) for _ in range(20)]
+
+plt.boxplot([group1, group2, group3])
+plt.xticks([1, 2, 3], ["Група A", "Група B", "Група C"])
+plt.xlabel("Групи")
+plt.ylabel("Оцінки")
+plt.title("Порівняння результатів іспитів")
+plt.show()
