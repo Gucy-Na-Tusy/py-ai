@@ -1,0 +1,29 @@
+math = [80, 92, 75, 60, 88]
+physics = [70, 65, 90, 85, 78]
+english = [95, 100, 85, 90, 87]
+
+subjects = {
+    "Math": math,
+    "Physics": physics,
+    "English": english
+}
+stats = {}
+
+for subject, scores in subjects.items():
+    stats[subject] = {
+        "avg": sum(scores) / len(scores),
+        "min": min(scores),
+        "max": max(scores)
+    }
+
+best_subject = max(stats, key=lambda x: stats[x]["avg"])
+stats, best_subject
+
+/////////////////////////////////////////////Markdown///////////////////////////////////
+
+| Предмет | Середній бал | Мінімум | Максимум |
+|---------|--------------|---------|----------|
+| Math    | 79.0         | 60      | 92       |
+| Physics | 77.6         | 65      | 90       |
+| English | 91.4         | 85      | 100      |
+
