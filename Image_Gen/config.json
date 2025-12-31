@@ -1,0 +1,7 @@
+{
+    "default_steps": 25,
+    "default_guidance": 7.5,
+    "default_width": 512,
+    "default_height": 512,
+    "output_folder": "outputs"
+}
